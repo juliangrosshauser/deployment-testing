@@ -19,6 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: check
     steps:
+      - name: Add notice
+        run: echo "::notice title=Deployment Plan::The deployment plan includes the following changes"
+
       - name: Add plan
         run: |
           echo "# Deployment Plan" >> $GITHUB_STEP_SUMMARY
