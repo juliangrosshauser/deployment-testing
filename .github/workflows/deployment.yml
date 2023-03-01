@@ -5,6 +5,13 @@ on:
     branches:
       - main
   pull_request:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Deployment environment
+        type: environment
+        required: true
+
 
 jobs:
   check:
